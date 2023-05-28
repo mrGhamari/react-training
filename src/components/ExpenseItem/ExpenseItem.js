@@ -1,7 +1,7 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate/ExpenseDate";
 
-const ExpenseItem = ({data}) => {
+const ExpenseItem = ({ data }) => {
   return (
     <>
       <div className="expense-item">
