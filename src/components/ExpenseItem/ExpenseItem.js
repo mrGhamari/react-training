@@ -1,14 +1,14 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate/ExpenseDate";
 
-const ExpenseItem = ({ data }) => {
+const ExpenseItem = (props) => {
   return (
     <>
       <div className="expense-item">
-        <ExpenseDate date={data.date} />
+        <ExpenseDate date={props.item.date} />
         <div className="expense-item__description">
-          <h2>{data.title}</h2>
-          <div className="expense-item__price">{data.amount}</div>
+          <h2>{props.item.title}</h2>
+          <div className="expense-item__price">{props.item.amount}</div>
         </div>
       </div>
     </>

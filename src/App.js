@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Card from "./components/card/Card";
 import NewExpense from "./components/NewExpense/newExpense";
-import ExpenseItem from "./components/ExpenseItem/ExpenseItem";
+import ExpensesList from "./components/ExpenseList/ExpenseList";
 
 function App() {
   const expenseArray = [];
@@ -16,9 +16,7 @@ function App() {
     <div className="App">
       <NewExpense onAddExpense={addExpenseHandler} />
       <Card className="wrapper">
-        {expenses.map((item, index) => (
-          <ExpenseItem key={index} data={item} />
-        ))}
+        <ExpensesList items={expenses} />
       </Card>
     </div>
   );
