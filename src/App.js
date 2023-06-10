@@ -3,6 +3,7 @@ import { useState } from "react";
 import Card from "./components/card/Card";
 import NewExpense from "./components/NewExpense/newExpense";
 import ExpensesList from "./components/ExpenseList/ExpenseList";
+import ExpensesChart from "./components/ExpensesChart/ExpensesChart";
 
 function App() {
   const expenseArray = [];
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <NewExpense onAddExpense={addExpenseHandler} />
       <Card className="wrapper">
+        <ExpensesChart expenses={expenses} />
         <ExpensesList items={expenses} />
       </Card>
     </div>

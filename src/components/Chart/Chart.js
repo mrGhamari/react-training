@@ -4,14 +4,16 @@ import ChartBar from "./ChartBar/ChartBar";
 const Chart = (props) => {
   return (
     <>
-      {props.dataPoints.map((dataPoint, index) => (
-        <ChartBar
-          key={index}
-          value={dataPoint.value}
-          maxValue={null}
-          label={dataPoint.label}
-        />
-      ))}
+      <div className="chart">
+        {props.dataPoints.map((dataPoint, index) => (
+          <ChartBar
+            key={index}
+            value={dataPoint.value}
+            maxValue={100}
+            label={dataPoint.label}
+          />
+        ))}
+      </div>
     </>
   );
 };
